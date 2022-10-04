@@ -30,6 +30,10 @@ from atlas_utils.acl_model import Model as AclLiteModel
 
 MODEL_PATH = os.path.join(
     "/home/HwHiAiUser/gesture-controlled-drone/model/OpenPose_for_TensorFlow_BatchSize_1.om")
+
+assert os.path.exists(MODEL_PATH) # Make sure to set model path
+    
+
 IMAGE_PATH = sys.argv[1] if len(sys.argv) > 1 else "./assets/in.png"
 
 print("MODEL_PATH:", MODEL_PATH)
